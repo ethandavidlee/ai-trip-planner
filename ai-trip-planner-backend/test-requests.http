@@ -1,0 +1,88 @@
+### CREATE five documents.
+POST http://localhost:3000/trips HTTP/1.1
+content-type: application/json
+
+{
+    "country": "Vietnam",
+    "startDate": "2024-09-05",
+    "endDate": "2024-09-10",
+    "tripType": "Adventure"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/destinations HTTP/1.1
+content-type: application/json
+
+{
+    "city": "Seoul",
+    "country": "South Korea",
+    "lastVisit": "2024-04-08",
+    "numberVisits": 1
+}
+
+### CREATE 3
+POST http://localhost:3000/destinations HTTP/1.1
+content-type: application/json
+
+{
+    "city": "Busan",
+    "country": "South Korea",
+    "lastVisit": "2024-04-05",
+    "numberVisits": 1
+}
+
+### CREATE 4
+POST http://localhost:3000/destinations HTTP/1.1
+content-type: application/json
+
+{
+    "city": "Gyeongju",
+    "country": "South Korea",
+    "lastVisit": "2024-04-07",
+    "numberVisits": 1
+}
+
+### CREATE 5
+POST http://localhost:3000/destinations HTTP/1.1
+content-type: application/json
+
+{
+    "city": "Hull",
+    "country": "United Kingdom",
+    "lastVisit": "2022-08-27",
+    "numberVisits": 3
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/destinations HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/destinations/6652e3ec31c6fa8a280e3a27 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/destinations/6652e3ec31c6fa8a280e3a27 HTTP/1.1
+content-type: application/json
+
+{
+    "city": "Tokyo",
+    "country": "Japan",
+    "lastVisit": "2023-06-25",
+    "numberVisits": 2
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/destinations/6652e3ec31c6fa8a280e3a27 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/destinations HTTP/1.1
+

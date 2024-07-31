@@ -1,0 +1,328 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*   ----- Variables  -----  */
+:root {
+  --forrestGreen: #22311d;
+  --skyBlue: #b3cff2E6;
+  --offWhite: #e4e4e4;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {}. */
+  background: var(--offWhite);
+  color: var(--darkGreyBlue);
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  max-width:100%;
+  text-align: center
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  background-color: var(--forrestGreen);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+header h1 {
+  color: white;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: 1.8em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+main {}
+section {
+  background-color: var(--skyBlue);
+  padding: 5%;
+  margin: 5% 10%;
+}
+article {
+}
+  #topic1 {}
+  #topic2 {}
+div {}
+aside {}
+
+footer {
+  background-color: var(--forrestGreen);
+  color: var(--offWhite);
+  padding: 0.1%;
+}
+footer p {
+    color: var(--offWhite);
+    font-size: 1em;
+    text-align: left;
+    margin-left: 1.5%
+}
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav a {
+  color: white;
+  font-weight: normal;
+  padding: 0;
+  margin: 0 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav, .local {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.local a {
+  background-color: var(--skyBlue);
+  color: var(--darkGreyBlue);
+  font-weight: normal;
+  text-decoration: none;
+  padding: 3px;
+  margin: auto 1px;
+  border: 0.5px solid var(--darkGreyBlue);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.local a:hover {
+  background-color: var(--mediumPurple);
+  color: var(--lightBlue);
+  border: 0.5px solid var(--lightBlue);
+}
+.submitButton {
+  text-align: right;
+  padding-right: 0.5%;
+}
+
+
+/*  -----  Typography  ----- */
+p {
+  font-size: 1.6em;
+  color: var(--forrestGreen);
+}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {font-family: "DM Sans", sans-serif; color: black;}
+h1 {}
+h2 {
+  font-size: 5em;
+  color: var(--forrestGreen);
+}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {}
+ins {}
+
+/*  ----- Table ----- */
+table {
+  border: 2px solid var(--forrestGreen);
+  width: 100%;
+  margin: 0 auto;  /* Centers the table horizontally */
+  background-color: var(--offWhite);
+  table-layout: fixed;  /* Evenly spaced columns */
+  border-collapse: collapse;  /* Combined borders */
+}
+caption {}
+thead {
+  border-bottom: 3px solid var(--forrestGreen); 
+  border-right: 2px dotted var(--forrestGreen); 
+}
+tbody {}
+tfoot {}
+tr td {
+  border-bottom: 2px solid var(--forrestGreen);
+  border-right: 2px dotted var(--forrestGreen); 
+}
+/* Column widths */
+table thead th:nth-child(1), table tbody td:nth-child(1) {
+  width: 30%;
+}
+table thead th:nth-child(2), table tbody td:nth-child(2) {
+  width: 25%;
+}
+table thead th:nth-child(3), table tbody td:nth-child(3) {
+  width: 25%;
+}
+table thead th:nth-child(4), table tbody td:nth-child(4) {
+  width: 10%;
+}
+table thead th:nth-child(5), table tbody td:nth-child(5) {
+  width: 10%;
+}
+tbody td:nth-child(1) {
+  text-align: left;
+  padding-left: 1%;
+}
+tr:nth-child(even) {}
+.date {}
+.num {}
+th {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form, button, input, select, textarea {}
+fieldset {}
+legend {}
+label {}
+button {
+  border: 2px solid var(--offWhite);
+  border-radius: 2px;
+  background-color: var(--forrestGreen);
+  color: var(--offWhite);
+  font-size: 1.6em;
+  font-weight: normal;
+  padding: 1.5% 3.5%;
+  margin: 3%;
+}
+button:hover {
+  color: var(--forrestGreen);
+  background-color: var(--offWhite);
+  border: 2px solid var(--forrestGreen)
+}
+input[type="text"][name="quantity"] {
+  width: 160px;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+textarea {
+  width: 97.5%;
+  display: block;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+textarea {height: 80px;}
+select {
+}
+  optgroup {}
+  option {}
+
+:focus{}
+*:required {
+}
+label.required::after {
+  content:" *";
+  color:red;
+}
+
+input::placeholder {
+}
+output {}
+meter {}
+progress {}
+
+
+/* ----- Media ----- */
+figure {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.gallery {
+}
+
+.gallery figure {
+}
+
+.gallery figcaption {
+}
+
+.gallery img  {
+}
+
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {}
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
