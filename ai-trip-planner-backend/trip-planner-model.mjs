@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import 'dotenv/config';
 
 // Set the strictQuery option as recommended by the warning
-mongoose.set('strictQuery', true); // or false, depending on your needs
+mongoose.set('strictQuery', true);
 
 // Connect based on the .env file parameters.
 mongoose.connect(
